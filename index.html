@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Signals</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg,#0b1220,#05080f);
+    color: white;
+    text-align: center;
+}
+
+.container {
+    max-width: 380px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* LIVE */
+.live {
+    color: #ff3b3b;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* IMAGE */
+.profile img {
+    width: 140px;
+    height: 140px;
+    border-radius: 25px;
+    border: 3px solid #00ffd5;
+    box-shadow: 0 0 30px #00ffd5;
+}
+
+/* BADGE */
+.badge {
+    margin-top: 12px;
+    padding: 8px 16px;
+    border-radius: 25px;
+    background: rgba(0,255,213,0.1);
+    color: #00ffd5;
+    display: inline-block;
+}
+
+/* CARD */
+.card {
+    background: #111a2e;
+    padding: 18px;
+    border-radius: 18px;
+    margin-top: 20px;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.stat {
+    flex: 1;
+    background: #111a2e;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+/* MAIN BUTTON */
+.btn a {
+    display: block;
+    margin-top: 25px;
+    padding: 16px;
+    border-radius: 12px;
+    font-weight: bold;
+    color: black;
+    background: linear-gradient(90deg,#00ffd5,#00bfa5);
+    box-shadow: 0 0 25px #00ffd5;
+    text-decoration: none;
+}
+
+/* SMALL */
+.small {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+/* STICKY BUTTON */
+.sticky {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #0b1220;
+    padding: 10px;
+}
+
+.sticky a {
+    display: block;
+    margin: auto;
+    width: 90%;
+    padding: 14px;
+    border-radius: 10px;
+    background: #00ffd5;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* ONLINE */
+.online {
+    position: fixed;
+    bottom: 70px;
+    left: 10px;
+    background: #111a2e;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* POPUP */
+.popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #111a2e;
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="live">● LIVE — Signals Active</div>
+
+<div class="profile">
+<img src="https://i.ibb.co/B2RHk7C7/1bd43e003d0fee863c7982d050087da8-1.jpg">
+</div>
+
+<div class="badge">✔ VERIFIED & TRUSTED</div>
+
+<p>Join <b>40K+</b> members winning daily with our <br>95% accurate colour prediction signals</p>
+
+<div class="card">
+<h3>Colour Prediction</h3>
+<p>Live signals every round</p>
+<b style="color:#00ffd5;">95% Accurate</b>
+</div>
+
+<div class="stats">
+<div class="stat"><h3>25K+</h3><p>Members</p></div>
+<div class="stat"><h3>95%</h3><p>Accuracy</p></div>
+<div class="stat"><h3>₹2Cr+</h3><p>Total Won</p></div>
+</div>
+
+<div class="btn">
+<a href="https://rajagames92.com/#/register?invitationCode=766125847054">
+JOIN TELEGRAM CHANNEL
+</a>
+</div>
+
+<div class="small">
+⚡ Only 37 spots left today <br>
+✔ No Payment ✔ Instant Access
+</div>
+
+</div>
+
+<!-- STICKY BUTTON -->
+<div class="sticky">
+<a href="https://rajagames92.com/#/register?invitationCode=766125847054">
+JOIN TELEGRAM CHANNEL
+</a>
+</div>
+
+<!-- ONLINE -->
+<div class="online" id="online">● 1200 online</div>
+
+<!-- POPUP -->
+<div class="popup" id="popup">🔥 Someone just joined!</div>
+
+<script>
+// ONLINE COUNT CHANGE
+setInterval(() => {
+    let num = Math.floor(1000 + Math.random() * 500);
+    document.getElementById("online").innerHTML = "● " + num + " online";
+}, 3000);
+
+// POPUP SHOW
+setInterval(() => {
+    let pop = document.getElementById("popup");
+    pop.style.display = "block";
+    setTimeout(()=>{ pop.style.display="none"; },2000);
+}, 5000);
+</script>
+
+</body>
+</html>
